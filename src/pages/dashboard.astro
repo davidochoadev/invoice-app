@@ -14,7 +14,7 @@ const sessionCookie = Astro.cookies.get("session")!.value;
 const decodedCookie = await auth.verifySessionCookie(sessionCookie);
 const user = await auth.getUser(decodedCookie.uid);
 
-console.log("user is:", user.email);
+/* console.log("user is:", user.email); */
 
 if (!user) {
   return Astro.redirect("/signin");
